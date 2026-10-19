@@ -148,7 +148,7 @@ def main():
             for path in files:
                 add('output/' + TITLE + '/' + path.relative_to(title).as_posix(), path.read_bytes())
             helper = 'install.sh' if platform == 'linux' else 'install.ps1'
-            for name in ['install.py', helper, 'prepare-textures.py', 'ps5_install_lib.py', 'prepare-files.py', 'transfer-files.py', 'Prepare-Files-Windows.cmd', 'prepare-files.sh', 'validate-files.py', 'Validate-Files-Windows.cmd', 'validate-files.sh', 'INSTALL-HELPER-LICENSE']:
+            for name in ['install.py', helper, 'prepare-textures.py', 'ps5_install_lib.py', 'prepare-files.py', 'transfer-files.py', 'Prepare-Files-Windows.cmd', 'prepare-files.sh', 'validate-files.py', 'Validate-Files-Windows.cmd', 'validate-files.sh', 'ps5_store_setup.py', 'store-setup.py', 'Store-Setup-Windows.cmd', 'store-setup.sh', 'INSTALL-HELPER-LICENSE']:
                 add('tools/' + name, (ROOT / 'ps5/tools' / name).read_bytes(), 0o755 if name.endswith('.sh') else 0o644)
             add('README.md', (ROOT / 'README.md').read_bytes())
             add('INSTALL.txt', (ROOT / 'ps5/INSTALL.txt').read_bytes())
