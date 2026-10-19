@@ -148,10 +148,11 @@ def main():
             for path in files:
                 add('output/' + TITLE + '/' + path.relative_to(title).as_posix(), path.read_bytes())
             helper = 'install.sh' if platform == 'linux' else 'install.ps1'
-            for name in ['install.py', helper, 'prepare-textures.py']:
+            for name in ['install.py', helper, 'prepare-textures.py', 'ps5_install_lib.py', 'prepare-files.py', 'transfer-files.py', 'Prepare-Files-Windows.cmd', 'prepare-files.sh', 'INSTALL-HELPER-LICENSE']:
                 add('tools/' + name, (ROOT / 'ps5/tools' / name).read_bytes(), 0o755 if name.endswith('.sh') else 0o644)
             add('README.md', (ROOT / 'README.md').read_bytes())
             add('INSTALL.txt', (ROOT / 'ps5/INSTALL.txt').read_bytes())
+            add('INSTALL.md', (ROOT / 'INSTALL.md').read_bytes())
             add('MANIFEST.json', (json.dumps(manifest, indent=2) + '\n').encode())
         with zipfile.ZipFile(target) as z:
             if z.testzip() is not None:

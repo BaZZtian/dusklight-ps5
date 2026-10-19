@@ -1,5 +1,9 @@
 # Dusklight for PS5
 
+**[Start here: installation, USB/offline copying, Wi-Fi FTP and game-file locations](INSTALL.md).**
+M.2, Ethernet and PS5 Upload are optional. The guide also explains recovery after
+store updates; older packaged instructions may describe the developer's M.2 setup.
+
 A native PS5 port of [Dusklight](https://github.com/TwilitRealm/dusklight), based on v2.0.3.
 The tested build reaches playable gameplay with working controller input and saves.
 
