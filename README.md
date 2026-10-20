@@ -1,3 +1,10 @@
+> Personal-data storage changes in this proposal: saves/settings move to
+> `/data/dusklight/<TITLEID>/user/`, protected ISOs to sibling `images/`.
+> See [storage and upgrade instructions](ps5/STORAGE-CHANGES.md) before upgrading.
+> Existing data migration is once-only; ISOs are moved/copied only on explicit
+> request. Preserve personal files before the first upgrade. The original-release
+> install paths and observations below are historical where they differ.
+
 # Dusklight for PS5
 
 A native PS5 port of [Dusklight](https://github.com/TwilitRealm/dusklight), based on v2.0.3.
