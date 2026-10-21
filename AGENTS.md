@@ -69,3 +69,8 @@ pull request, build, release, and Store/catalog submission.**
   established: **do not publish, package, merge, or submit a release**.
 - Do not bypass these rules to meet a deadline. This document is operational
   guidance only: it does not itself license, transfer, or revoke any copyright.
+
+## 4. Project-specific known rights (not a complete legal audit)
+
+- Fork based on `mshivam019/dusklight-ps5`; game-port source `TwilitRealm/dusklight` declares CC0. Other PS5 runtime/build dependencies need file-level and linked-binary review.
+- Root CC0 does not waive licenses on embedded third-party parts, nor does a fork transfer authorship.
