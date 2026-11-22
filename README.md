@@ -1,5 +1,11 @@
 # Dusklight for PS5
 
+## Start here
+
+Use the installation guide to set up your own supported GameCube disc image. For existing ProsperoStore installs, follow the store-specific setup before copying game files.
+
+[Original project releases](https://github.com/mshivam019/dusklight-ps5/releases)
+
 **Installed from ProsperoStore?** [Use the game-specific setup](INSTALL.md#already-installed-from-prosperostore): choose your game files and an output location; it prepares and checks a ready-to-copy folder automatically. Download **PS5-Install-Helper-v1.2.0.zip** from this game's release. Python 3.9+ is required; game conversion/module preparation requirements are listed in the guide.
 
 **[Start here: installation, USB/offline copying, Wi-Fi FTP and game-file locations](INSTALL.md).**
@@ -110,25 +116,6 @@ contains multiple languages. This release skips that screen by default.
 The Dusklight settings interface is currently in English; changing game text
 language does not translate it. Translation patches are not included.
 
-## Build and validate
-
-A Linux build host needs Python 3, Git, CMake, Ninja, Clang/LLVM, Make, Meson,
-rsync, wget and unzip. Rebuilding RADV also needs the host Mesa shader-tool dependencies.
-The repository is currently private, so dependency fetches require GitHub access.
-After it becomes public, the same pinned URLs can be fetched without that access.
-
-```sh
-python3 ps5/tools/build.py --setup --build-radv
-python3 ps5/tools/validate.py
-python3 ps5/tools/package-release.py --version ps5-v0.1.0
-python3 ps5/tools/package-source.py --version ps5-v0.1.0
-```
-
-A prepared Vulkan tree can be supplied with `--vulkan-dir /path/to/PS5_Vulkan`.
-Dependency pins are in [ps5/dependencies.json](ps5/dependencies.json).
-The full SDL3/Dawn/game build script has passed using the prepared dependencies;
-a complete empty-machine RADV bootstrap has not yet been verified.
-
 ## Credits and licensing
 
 - [Twilit Realm](https://github.com/TwilitRealm) and the [Dusklight contributors](https://github.com/TwilitRealm/dusklight): the original PC port and engine.
@@ -146,3 +133,5 @@ This is an independent port, not an official Twilit Realm release.
 Not affiliated with Nintendo or Sony Interactive Entertainment. PlayStation and PS5
 are trademarks of Sony Interactive Entertainment. Vulkan is a Khronos Group trademark;
 this RADV port is not a conformant Vulkan product.
+
+[Build and developer documentation](BUILDING.md)
